@@ -1,0 +1,27 @@
+!!!
+%html
+  %head
+    %title Edynak Basic Blog
+    %meta{:content => "width=device-width,initial-scale=1", :name => "viewport"}/
+    = csrf_meta_tags
+    = csp_meta_tag
+    = stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload'
+    = stylesheet_link_tag 'application', 'http://fonts.googleapis.com/css?family=Raleway:400,700'
+    = javascript_pack_tag 'application', 'data-turbolinks-track': 'reload'
+    = favicon_link_tag 'favicon.ico'
+  %body
+    #sidebar
+      %ul
+        %li.category= link_to "Edynak Basic Blog", root_path
+        %li= link_to "Posts", root_path
+        %li About
+      %p.sign_in User Login
+    #main_content
+      #header
+        %p Post Feed
+        .button
+          %button.button= link_to "Create Post", new_post_path
+          %button.button Log Out
+      - flash.each do |name, msg|
+        = content_tag(:div, msg, class: "alert")
+      = yield
