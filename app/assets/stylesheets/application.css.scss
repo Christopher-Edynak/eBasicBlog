@@ -68,9 +68,9 @@ a {
 .button {
   outline: none;
   background: transparent;
-  border: 1.5px solid #fff;
   padding: 0.5em 2.5em;
   border-radius: 0.5em;
+  float: right;
   &:hover {
     border: 1px solid #333734;
     color: #22487b;
@@ -91,7 +91,7 @@ a {
 #main_content {
   margin-left: 225px;
   #header {
-    padding: 1.2em 3.5em;
+    padding: 2.5em 3.5em;
     border-bottom: 1px solid #b8e2fe;
     background: #529fcd;
     color: #fff;
